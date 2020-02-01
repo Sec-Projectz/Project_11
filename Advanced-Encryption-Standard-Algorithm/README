@@ -1,0 +1,23 @@
+Java Documentation located in dist/javadoc
+
+Command for encrypting: java AES e [-length] [-mode] keyFile inputFile
+Command for decryption: java AES d [-length] [-mode] keyFile encryptedinputFile
+
+-length is an optional argument which denotes the keysize that the user intends to use for the AES cipher (128 or 256).
+-mode is an optional argument which denotes the mode of operation which will be used for the AES cipher (ECB or CBC).
+
+The default options are: -length 128, and -mode ECB.
+
+Note: In order for a more secure encryption, it is recommended that you use CBC. To use CBC, you need to add an Initialization Vector to your key file
+in a new line after the key, which is a 32-character length hex character.
+
+Files that are encrypted will have the file name: [inputfilename].enc
+For decrypted files: [encryptedfilename].dec
+
+Format for input: A file with each line containing 32 hex characters (hence, 16 bytes on each line).
+
+An example of such input:
+
+0A935D11496532BC1004865ABDCA4295
+00112233445566778899AABBCCDDEEFF
+   ....

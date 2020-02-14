@@ -1,3 +1,7 @@
+import java.util.*;
+import java.lang.*;
+
+public class enc{
 private static String secretKey = "boooooooooom!!!!";
 private static String salt = "ssshhhhhhhhhhh!!!!";
  
@@ -25,8 +29,6 @@ public static String encrypt(String strToEncrypt, String secret)
 }
 
 
-private static String secretKey = "boooooooooom!!!!";
-private static String salt = "ssshhhhhhhhhhh!!!!";
  
 public static String decrypt(String strToDecrypt, String secret) {
     try
@@ -61,4 +63,5 @@ public static void main(String[] args)
     System.out.println(originalString);
     System.out.println(encryptedString);
     System.out.println(decryptedString);
+}
 }
